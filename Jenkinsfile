@@ -26,12 +26,10 @@ pipeline {
             steps {
                  dir("tp2jenkins"){
                     
-                    sh " docker compose up -d"
+                    sh " docker-ompose up -d"
                 }                
             }
         }
-         environment {
-        VERSION = "1.0.0"
-    }
+     
     }
 }
