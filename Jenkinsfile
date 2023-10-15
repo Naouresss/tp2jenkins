@@ -26,7 +26,7 @@ pipeline {
             steps {
                  dir("tp2jenkins"){
                     
-                    sh " docker-ompose up -d"
+                    sh " docker-compose up -d"
                 }                
             }
         }
