@@ -25,9 +25,13 @@ pipeline {
         stage ("Run docker compose") {
             steps {
                  dir("tp2jenkins"){
+                    sh "docker-compose rm -f -s -v"
                     sh " docker compose up -d"
                 }                
             }
         }
+         environment {
+        VERSION = "1.0.0"
+    }
     }
 }
